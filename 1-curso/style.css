@@ -1,0 +1,33 @@
+body {
+  background-color: blue; }
+
+div h1 {
+  color: white; }
+
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 20px; }
+  .container h1 {
+    color: black; }
+
+button {
+  border-radius: 10px; }
+
+p {
+  font-size: 14.4px; }
+
+.herencia {
+  border: 2px solid black;
+  border-radius: 10px; }
+
+.herencia {
+  background-color: aqua; }
+
+body {
+  background-color: violet; }
+
+/*# sourceMappingURL=style.css.map */

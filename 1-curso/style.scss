@@ -1,0 +1,73 @@
+// para compilar el scss a scc
+// sass style.scss style.css
+// sass --watch style.scss:style.css
+
+// 1. Variables
+// $primary-color: blue;
+// $secondary-color: white;
+@import 'variables.scss';
+
+body {
+  background-color: $primary-color;
+}
+
+// 2. Anidamiento
+div {
+  h1 {
+    color: $secondary-color;
+  }
+}
+
+// 3. Mixin
+@mixin redondeo($radius) {
+  border-radius: $radius;
+}
+
+.container {
+  background-color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+
+  h1 {
+    color: black;
+  }
+
+  @include redondeo(20px);
+}
+
+button {
+  @include redondeo(10px);
+}
+
+// 4. Operaciones
+$altura: 16px;
+
+p {
+  font-size: $altura * 0.9;
+}
+
+// 5. Herencia
+%general {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.herencia {
+  @extend %general;
+  background-color: aqua;
+}
+
+
+// 6. Condicionales
+body {
+    @if $primary-color == blue {
+        background-color: violet;
+    }
+    @else {
+        background-color: brown;
+    }
+}
+
+// 7. Importaciones

@@ -1,0 +1,59 @@
+body {
+    display: grid;
+    place-content: center;
+    min-height: 50vh;
+}
+
+.pulser {
+    width: 50px;
+    height: 50px;
+    background-color: #09f;
+    border-radius: 50%;
+    position: relative;
+    /* animation: animation-name;
+    animation-duration: 3s; */
+}
+
+.pulser::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #09f;
+    border-radius: 50%;
+    z-index: -1;
+
+    animation-name: animation-pulse;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 5;
+    animation-fill-mode: both;
+}
+
+@keyframes animation-pulse {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        scale: 1.4;
+        opacity: .4;
+    }
+
+    100% {
+        opacity: .6;
+    }
+}
+
+
+@keyframes animation-name {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(100px);
+    }
+}

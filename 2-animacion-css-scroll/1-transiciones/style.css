@@ -1,0 +1,82 @@
+/* 
+Cuando hay dos estados se puede hacer
+una transicion,
+Estados:
+    - hover
+    - focus
+    - focus within
+    - target
+    - active
+    - cambiar una clase en javascript
+
+
+1. Las transiciones se ponen en su estado iniciar
+*/
+
+/* Estado Iniciar */
+.pulser {
+    width: 30px;
+    height: 30px;
+    background-color: #09e;
+    border-radius: 50%;
+    position: relative;
+    /* Estado final */
+    transition: all 300ms ease-in-out; 
+
+}
+
+/* Estado Final */
+.pulser:hover {
+    scale: 2;
+    background-color: purple;
+    box-shadow: 0 0 10px purple;
+    /* La primera animacion */
+    transition-duration: 1s;
+}
+
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 50vh;
+}
+
+
+/* Parte 2 */
+.pulser-1 {
+    height: 50px;
+    width: 50px;
+    background-color: #09e;
+    border-radius: 50%;
+    position: relative;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    opacity: 0;
+}
+
+section {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+section:hover .pulser-1 {
+    opacity: 1;
+}
+
+.pulser-1:first-child {
+    transition-delay: 0s;
+}
+
+.pulser-1:nth-child(2) {
+    transition-delay: 300ms;
+}
+
+.pulser-1:nth-child(3) {
+    transition-delay: 600ms;
+}
+
+
+
